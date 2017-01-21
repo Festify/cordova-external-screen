@@ -15,4 +15,4 @@ class ExternalScreen extends EventEmitter {
 
 exports.createScreenListener = function() {
     return (new ExternalScreen()).registerEvents();
-}
+};
