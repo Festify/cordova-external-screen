@@ -10,7 +10,7 @@
 @property (nonatomic) ScreenNotificationDelegate* screenNotificationDelegate;
 @property (nonatomic, strong) WKWebView* externalWebView;
 
-- (void) registerEvents:(CDVInvokedUrlCommand*)command;
+- (void) registerEventsListener:(CDVInvokedUrlCommand*)command;
 - (void) loadURL:(CDVInvokedUrlCommand*)command;
 - (void) hasExternalScreen:(CDVInvokedUrlCommand*)command;
 

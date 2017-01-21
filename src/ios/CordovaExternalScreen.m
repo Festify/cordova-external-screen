@@ -7,7 +7,7 @@
     self.screenNotificationDelegate = [ScreenNotificationDelegate eventEmitterWithCommandDelegate: _commandDelegate];
 }
 
--(void)registerEvents:(CDVInvokedUrlCommand*)command {
+-(void)registerEventsListener:(CDVInvokedUrlCommand*)command {
     NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
 
     [self.screenNotificationDelegate setCallbackId:command.callbackId];
