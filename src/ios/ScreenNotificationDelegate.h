@@ -3,9 +3,7 @@
 
 #import "CordovaEventEmitter.h"
 
-@interface ScreenNotificationDelegate : CordovaEventEmitter {
-
-}
+@interface ScreenNotificationDelegate : CordovaEventEmitter
 
 - (void) handleScreenConnectNotification:(NSNotification*)aNotification;
 - (void) handleScreenDisconnectNotification:(NSNotification*)aNotification;

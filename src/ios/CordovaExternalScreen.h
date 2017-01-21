@@ -3,19 +3,19 @@
 #import <WebKit/WebKit.h>
 #import "ScreenNotificationDelegate.h"
 
-@interface CordovaExternalScreen : CDVPlugin {
-}
+@interface CordovaExternalScreen : CDVPlugin
 
 @property (nonatomic, strong)UIWindow* externalWindow;
 @property (nonatomic) ScreenNotificationDelegate* screenNotificationDelegate;
 @property (nonatomic, strong) WKWebView* externalWebView;
 
-- (void) registerEventsListener:(CDVInvokedUrlCommand*)command;
-- (void) loadURL:(CDVInvokedUrlCommand*)command;
 - (void) hasExternalScreen:(CDVInvokedUrlCommand*)command;
+- (void) loadURL:(CDVInvokedUrlCommand*)command;
+- (void) registerEventsListener:(CDVInvokedUrlCommand*)command;
 
 - (bool) hasExternalScreen;
 - (WKWebView*) getWebView;
 
 - (void) handleScreenDisconnectNotification:(NSNotification*)aNotification;
+
 @end
