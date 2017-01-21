@@ -2,6 +2,9 @@
 <plugin id="rocks.festify.cordova-external-screen" version="1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-external-screen</name>
+
+    <hook type="before_plugin_install" src="package.sh" />
+
     <js-module name="cordova-external-screen" src="www/cordova-external-screen.js">
         <clobbers target="cordova.plugins"/>
     </js-module>
@@ -17,7 +20,7 @@
         <header-file src="src/ios/CordovaEventEmitter.h"/>
         <source-file src="src/ios/ScreenNotificationDelegate.m"/>
         <header-file src="src/ios/ScreenNotificationDelegate.h"/>
-        
+
         <framework src="WebKit.framework" />
     </platform>
 </plugin>
