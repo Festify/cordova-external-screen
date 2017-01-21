@@ -29,7 +29,7 @@
 }
 
 -(void)loadURL:(CDVInvokedUrlCommand*)command {
-    if(![self hasExternalScreen]){
+    if (![self hasExternalScreen]) {
         CDVPluginResult *result = [CDVPluginResult
                                    resultWithStatus: CDVCommandStatus_ERROR
                                    messageAsString: @"No external screens ¯\\_(ツ)_/¯"];
@@ -49,7 +49,7 @@
 }
 
 -(WKWebView*)getWebView {
-    if(!self.externalWebView){
+    if (!self.externalWebView) {
         UIScreen* externalScreen = [[UIScreen screens] objectAtIndex:1];
 
         CGRect screenBounds = externalScreen.bounds;

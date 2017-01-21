@@ -26,7 +26,7 @@ NSString* getErrorFromMatrix(NSDictionary *matrix, NSNumber *code) {
 }
 
 - (void)emit:(NSString *)eventName withData:(NSArray *) data {
-    if(self.eventCallbackId == nil) {
+    if (self.eventCallbackId == nil) {
         return;
     }
     
