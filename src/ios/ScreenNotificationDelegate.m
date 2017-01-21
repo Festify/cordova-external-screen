@@ -3,11 +3,11 @@
 @implementation ScreenNotificationDelegate
 
 - (void) handleScreenConnectNotification:(NSNotification*)aNotification {
-    [self emit:@"screenconnect" withData: @[]];
+    [self emit:@"connect" withData: @[]];
 }
 
 - (void) handleScreenDisconnectNotification:(NSNotification*)aNotification {
-    [self emit:@"screenconnect" withData: @[]];
+    [self emit:@"disconnect" withData: @[]];
 }
 
 @end
