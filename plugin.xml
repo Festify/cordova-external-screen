@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="rocks.festify.cordova-external-screen" version="1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-external-screen</name>
+    <js-module name="cordova-external-screen" src="www/cordova-external-screen.js">
+        <clobbers target="cordova.plugins"/>
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="ExternalScreen">
+                <param name="ios-package" value="CordovaExternalScreen"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CordovaExternalScreen.m"/>
+        <header-file src="src/ios/CordovaExternalScreen.h"/>
+        <source-file src="src/ios/CordovaEventEmitter.m"/>
+        <header-file src="src/ios/CordovaEventEmitter.h"/>
+        <source-file src="src/ios/ScreenNotificationDelegate.m"/>
+        <header-file src="src/ios/ScreenNotificationDelegate.h"/>
+        
+        <framework src="WebKit.framework" />
+    </platform>
+</plugin>
