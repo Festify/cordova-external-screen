@@ -5,7 +5,7 @@
 
     <hook type="before_plugin_install" src="package.sh" />
 
-    <js-module name="cordova-external-screen" src="www/cordova-external-screen.js">
+    <js-module name="cordova-external-screen" src="www/build/cordova-external-screen.js">
         <clobbers target="cordova.plugins"/>
     </js-module>
     <platform name="ios">
