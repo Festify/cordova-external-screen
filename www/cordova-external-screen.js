@@ -1,5 +1,3 @@
-require("es6-promise/auto");
-
 const EventEmitter = require("./lib/EventEmitter.js");
 const exec = require("./lib/execPromise.js");
 
