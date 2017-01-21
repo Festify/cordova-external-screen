@@ -74,11 +74,6 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-# SpotifySDK
-src/ios/spotify-sdk/
-src/android/spotify-auth/
-src/android/spotify-sdk/
-
 # Serverless
 .serverless/
 
@@ -90,3 +85,6 @@ src/android/spotify-sdk/
 
 # Webpack
 www/build/
+
+# XCode
+*.xcodeproj/
