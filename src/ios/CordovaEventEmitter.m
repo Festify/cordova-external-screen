@@ -17,7 +17,7 @@ NSString* getErrorFromMatrix(NSDictionary *matrix, NSNumber *code) {
 
 - (instancetype)initWithCommandDelegate:(id <CDVCommandDelegate>)commandDelegate {
     self.commandDelegate = commandDelegate;
-    
+
     return self;
 }
 
@@ -29,18 +29,18 @@ NSString* getErrorFromMatrix(NSDictionary *matrix, NSNumber *code) {
     if (self.eventCallbackId == nil) {
         return;
     }
-    
+
     NSDictionary *params = @{
-                             @"name": eventName,
-                             @"args": data
-                             };
-    
-    CDVPluginResult *result = [CDVPluginResult
-                               resultWithStatus: CDVCommandStatus_OK
-                               messageAsDictionary: params];
+        @"name": eventName,
+        @"args": data
+    };
+
+    CDVPluginResult *result = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK
+                                            messageAsDictionary: params];
     [result setKeepCallbackAsBool:YES];
-    
-    [self.commandDelegate sendPluginResult: result callbackId: self.eventCallbackId];
+
+    [self.commandDelegate sendPluginResult: result
+                                callbackId: self.eventCallbackId];
 }
 
 @end
