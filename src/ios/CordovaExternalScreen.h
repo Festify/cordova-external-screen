@@ -1,3 +1,6 @@
+#ifndef CordovaExternalScreen_h
+#define CordovaExternalScreen_h
+
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 #import <WebKit/WebKit.h>
@@ -19,3 +22,4 @@
 - (void) handleScreenDisconnectNotification:(NSNotification*)aNotification;
 
 @end
+#endif
