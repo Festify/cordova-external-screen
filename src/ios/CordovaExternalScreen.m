@@ -83,7 +83,13 @@
 }
 
 - (void) handleScreenDisconnectNotification:(NSNotification*)aNotification {
+    if (!self.externalWindow) {
+        return;
+    }
 
+    self.externalWindow.hidden = YES;
+    self.externalWebView = nil;
+    self.externalWindow = nil;
 }
 
 @end
