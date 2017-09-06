@@ -3,8 +3,6 @@
 
 #import <Cordova/CDVPlugin.h>
 
-NSString* getErrorFromMatrix(NSDictionary *matrix, NSNumber *code);
-
 @interface CordovaEventEmitter : NSObject
 
 @property (nonatomic) NSDictionary *codeMatrix;
