@@ -4,13 +4,16 @@
   "description": "A Cordova Plugin for displaying a Website over AirPlay",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Festify/cordova-external-screen.git"
+    "url": "git+https://github.com/kapilrc/cordova-external-screen.git"
   },
   "author": "Festify Dev Team <mail@festify.rocks>",
+  "contributors": [
+    {"name":"Kapil Choudhari", "email": "kapilrc@gmail.com", "url":"https://github.com/kapilrc"}
+  ],
   "bugs": {
-    "url": "https://github.com/Festify/cordova-external-screen"
+    "url": "https://github.com/kapilrc/cordova-external-screen"
   },
-  "homepage": "https://github.com/Festify/cordova-external-screen#readme",
+  "homepage": "https://github.com/kapilrc/cordova-external-screen#readme",
   "license": "MIT",
   "dependencies": {
     "es6-promise": "^4.0.5",
