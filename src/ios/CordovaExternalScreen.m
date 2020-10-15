@@ -47,7 +47,12 @@
         return;
     }
 
-    NSURL* url = [NSURL URLWithString: [command.arguments objectAtIndex: 0]];
+    NSString *folderString = [@"www/" stringByAppendingFormat:@"%@", [command argumentAtIndex:0]];
+    NSString* FILE_PATH = [[[NSBundle mainBundle] resourcePath]
+                             stringByAppendingPathComponent:folderString];
+
+    NSString *newString = [FILE_PATH stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    NSURL* url = [NSURL URLWithString: [@"file://" stringByAppendingFormat:@"%@", newString]];
     NSURLRequest* request = [NSURLRequest requestWithURL: url];
     [[self getWebView] loadRequest: request];
 
